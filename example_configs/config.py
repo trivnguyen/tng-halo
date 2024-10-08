@@ -34,6 +34,7 @@ def get_config():
     scheduler.decay_steps = 100_000   # this should not exceed training.num_steps
     scheduler.warmup_steps = 10_000  # about 5-10% of decay_steps
     scheduler.eta_min = 1e-6
+    scheduler.interval = 'step'
 
     config.training = training = ConfigDict()
     training.batch_size = 64
